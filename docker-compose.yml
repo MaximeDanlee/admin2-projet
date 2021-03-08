@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  bind-ns-externe:
+    image: internetsystemsconsortium/bind9:9.11
