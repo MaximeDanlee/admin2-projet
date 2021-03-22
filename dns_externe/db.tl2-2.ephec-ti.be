@@ -9,12 +9,14 @@ $TTL	3600
 			600 )	    ; Negative Cache TTL
 
 
-tl2-2.ephec-ti.be.      IN      NS      		ns.tl2-2.ephec-ti.be.
-@						IN 		MX 				mail.tl2-2.ephec-ti.be.
+tl2-2.ephec-ti.be.      IN      NS      				ns.tl2-2.ephec-ti.be.
+@						IN 		MX 		10				mail.tl2-2.ephec-ti.be.
+_sip._tcp				IN		SRV		10		8060	voip.tl2-2.ephec-ti.be.
 
 
-ns                      IN      A       		172.16.0.4  ; 135.125.101.226
-@                       IN      A       		172.16.0.2  ; 135.125.101.226
-www                     IN      A       		172.16.0.2  ; 135.125.101.226
-b2b                     IN      A       		172.16.0.3  ; 135.125.101.226
-mail 					IN		A				172.16.0.5	; 135.125.101.226
+ns                      IN      A       				172.16.0.4  ; 135.125.101.226
+@                       IN      A       				172.16.0.2  ; 135.125.101.226
+www                     IN      A       				172.16.0.2  ; 135.125.101.226
+b2b                     IN      A       				172.16.0.3  ; 135.125.101.226
+mail 					IN		A						172.16.0.5	; 135.125.101.226
+voip					IN		A						172.16.0.6  ; 135.125.101.226
