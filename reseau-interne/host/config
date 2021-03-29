@@ -1,7 +1,7 @@
 <-- Commande -->
 
-docker build -t resolveur .
-docker run -it --rm -d --network test-reseau --ip 172.16.128.3 --name resolveur resolveur
+docker build -t host .
+docker run -it --rm -d --network test-reseau --ip 172.16.128.5 --dns 172.16.128.3 --name host host
 
 docker network create -d bridge --subnet 172.16.128.0/24 test-reseau
 

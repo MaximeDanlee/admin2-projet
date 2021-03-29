@@ -1,5 +1,5 @@
 $TTL 604800
-@       IN      SOA     ns.woodytoys.be.       maxime.woodytoys.be. (
+@       IN      SOA     ns.woodytoys.intern.       maxime.woodytoys.intern. (
                 5               ; Serial
                 604800          ; Refresh
                 86400           ; Retry
@@ -7,7 +7,7 @@ $TTL 604800
                 604800 )        ; Negative Cache TTL
 
 ; Name servers
-woodytoys.be.  IN      NS       ns.woodytoys.be.
+woodytoys.intern.  IN      NS       ns.woodytoys.intern.
 
 ; A record for name server
 ns              IN      A       172.16.128.2  

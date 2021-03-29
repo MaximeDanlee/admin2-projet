@@ -1,10 +1,15 @@
-docker build -t resolveur .
-docker run -it --rm -d -p 8080:80 --name resolveur resolveur
+docker build -t soa .
+docker run -it --rm -d --network test-reseau --ip 172.16.128.2 --name soa soa
 
 
 named.conf.local => autoriser client du resolveur
 
 
+docker network create -d bridge --subnet 172.16.128.0/24 test-reseau
+
+docker network ls
+docker inspect test-reseau
 
 
+docker run -d --rm --name=host1 --net=test-reseau --ip=172.16.128.5 --dns=172.16.128.3 ubuntu:bionic /bin/bash -c "while :; do sleep 10; done"
 https://opensource.com/article/17/4/build-your-own-name-server
