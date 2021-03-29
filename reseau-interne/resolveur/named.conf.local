@@ -1,11 +1,11 @@
-zone "woodytoys.be" {                                                                                                                                                              
+zone "woodytoys.local" {                                                                                                                                                              
             type forward;                                                                                                                                                           
-            forwarders { 192.168.0.2; };                                                                                                                                            
+            forwarders { 172.16.128.2; };                                                                                                                                            
             forward only;                                                                                                                                                           
         };                                                                                                                                                                          
                                                                                                                                                                                     
-zone "0.168.192.in-addr.arpa" {                                                                                                                                                     
+zone "128.16.172.in-addr.arpa" {                                                                                                                                                     
             type forward;                                                                                                                                                           
-            forwarders { 192.168.0.2; };                                                                                                                                            
+            forwarders { 172.16.128.2; };                                                                                                                                            
             forward only;                                                                                                                                                           
         };  

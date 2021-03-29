@@ -1,9 +1,9 @@
-zone "woodytoys.be" IN { 
+zone "woodytoys.local" IN { 
 	type master;                                                            
-	file "/etc/bind/master/woodytoys.be";                                    
+	file "/etc/bind/master/woodytoys.local";                                    
 };
 
-zone "0.168.192.in-addr.arpa" IN {                                                       
+zone "128.16.172.in-addr.arpa" IN {                                                       
         type master;                                                            
-        file "/etc/bind/master/0.168.192.in-addr.arpa";                                  
+        file "/etc/bind/master/128.16.172.in-addr.arpa";                                  
 };  

@@ -10,11 +10,11 @@ $TTL 604800
 woodytoys.be.  IN      NS       ns.woodytoys.be.
 
 ; A record for name server
-ns              IN      A       192.168.0.2  ;adress ip temporaire
+ns              IN      A       172.16.128.2  
 
 ; Resolver
-resolv          IN      A       192.168.0.1  ;adress ip temporaire
+resolv          IN      A       172.16.128.3  
 
 ; A record for www
-www             IN      A       192.168.0.3  ;adress ip temporaire
+www             IN      A       172.16.128.4 
  

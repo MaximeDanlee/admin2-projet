@@ -6,5 +6,5 @@ COPY ./named.conf.options /etc/bind/named.conf.options
 
 RUN mkdir /etc/bind/master
 
-COPY ./master/woodytoys.be /etc/bind/master/woodytoys.be
-COPY ./master/0.168.192.in-addr.arpa /etc/bind/master/0.168.192.in-addr.arpa
+COPY ./master/woodytoys.local /etc/bind/master/woodytoys.local
+COPY ./master/128.16.172.in-addr.arpa /etc/bind/master/128.16.172.in-addr.arpa

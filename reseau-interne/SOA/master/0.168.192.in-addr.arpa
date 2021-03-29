@@ -1,5 +1,5 @@
 $TTL 86400; 24 hours could have been written as 24h or 1d
-$ORIGIN 0.168.192.IN-ADDR.ARPA.
+$ORIGIN 128.16.172.IN-ADDR.ARPA.
 
 @        IN     SOA     ns.woodytoys.be        maxime.woodytoys.be (
                         1       ; Serial
@@ -12,5 +12,5 @@ $ORIGIN 0.168.192.IN-ADDR.ARPA.
 
 ; Reverse dns
 2       IN      PTR     ns.woodytoys.be.
-1       IN      PTR     resolv.woodytoys.be.
-3       IN      PTR     www.woodytoys.be.
+3       IN      PTR     resolv.woodytoys.be.
+4       IN      PTR     www.woodytoys.be.
