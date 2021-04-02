@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN apt update && apt upgrade -y && apt install -y nginx && apt install php-fpm php-mysql -y
+RUN apt update && apt upgrade -y && apt install -y nginx && apt install php-fpm php-mysql -y && apt install mysql-server -y
 
 
 RUN mkdir /etc/nginx/html
