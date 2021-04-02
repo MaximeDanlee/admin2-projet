@@ -1,0 +1,12 @@
+docker build -t webserver-intern .
+
+docker run -it --rm -d -p 80:80 --network test-reseau --ip 172.16.128.4 --name web-intern webserver-intern
+
+<--- Tester serveur nginx --> 
+docker exec -it web-intern nginx -t
+docker exec -it web-intern service nginx restart
+
+
+<-- tester php -->
+docker exec -it web-intern php-fpm7.4 -t 
+docker exec -it web-intern service php7.4-fpm restart
