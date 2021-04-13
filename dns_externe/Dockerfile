@@ -3,7 +3,6 @@ RUN apt update && apt upgrade -y && apt install bind9 bind9utils -y && apt insta
 
 COPY ./named.conf /etc/bind/
 COPY ./named.conf.options /etc/bind/
-COPY ./named.conf.default_zones /etc/bind/
 COPY ./named.conf.local /etc/bind/
 COPY ./named.conf.log /etc/bind/
 
