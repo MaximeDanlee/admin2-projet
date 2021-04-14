@@ -15,6 +15,6 @@ RUN chmod a+x /etc/bind/zones/dnssec_key.sh
 RUN /etc/bind/zones/dnssec_key.sh
 RUN rm /etc/bind/zones/dnssec_key.sh
 
-CMD named -g &
+CMD named -g
 
 # EXPOSE 53
