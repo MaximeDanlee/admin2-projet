@@ -17,4 +17,4 @@ RUN rm /etc/bind/zones/dnssec_key.sh
 
 CMD named -g
 
-# EXPOSE 53
+EXPOSE 53
