@@ -1,0 +1,18 @@
+<-- Créer et lancer iamge docker -->
+docker build -t bdd .
+docker run -it --rm -d -p 3306:3306 --network test-reseau --ip 172.16.128.10 --name bdd bdd
+
+<-- configuration de mysql -->
+docker exec -it web-intern service mysql restart
+
+
+<-- rendre mysql server accessible -->
+dossier /etc/mysql/mysql.conf.d/mysqld.cnf
+bind adress : 0.0.0.0
+
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04-fr
+
+connecter mysql à distance : https://notes-de-cours.com/web/blogue/62/se-connecter-a-un-serveur-externe-mysql

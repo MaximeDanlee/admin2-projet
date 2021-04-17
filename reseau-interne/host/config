@@ -1,0 +1,30 @@
+<-- Commande -->
+
+docker build -t host .
+docker run -it --rm -d --network test-reseau --ip 172.16.128.5 --dns 172.16.128.3 --name host host
+
+
+<-- install dig command -->
+apt install dnsutils
+
+
+
+
+
+<-- Crer réseau -->
+docker network create -d bridge --subnet 172.16.128.0/24 test-reseau
+
+docker network ls
+docker inspect test-reseau
+
+
+
+
+
+
+named.conf.local => autoriser client du resolveur
+
+
+
+
+https://opensource.com/article/17/4/build-your-own-name-server
