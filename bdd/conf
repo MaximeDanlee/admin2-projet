@@ -11,6 +11,9 @@ dossier /etc/mysql/mysql.conf.d/mysqld.cnf
 bind adress : 0.0.0.0
 
 
+Password : 
+P@sswordMysql123
+
 
 
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04-fr
