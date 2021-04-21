@@ -3,7 +3,7 @@ cd /etc/bind/zones/
 dnssec-keygen -a NSEC3RSASHA1 -b 2048 -n ZONE l2-2.ephec-ti.be
 dnssec-keygen -f KSK -a NSEC3RSASHA1 -b 4096 -n ZONE l2-2.ephec-ti.be
 
-for key in `ls Ktl2-2.ephec-ti.be*.key`
+for key in `ls Kl2-2.ephec-ti.be*.key`
 do
 echo "\$INCLUDE $key">> db.l2-2.ephec-ti.be
 done
