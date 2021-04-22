@@ -15,9 +15,9 @@ _sip._tcp		86400			IN		SRV		10		60	5060	voip.l2-2.ephec-ti.be.
 _sip._udp		86400			IN		SRV		10		60	5060	voip.l2-2.ephec-ti.be.
 
 
-ns                      IN      A       				135.125.101.218
-@                       IN      A       				135.125.101.218
-www                     IN      A       				135.125.101.218
-b2b                     IN      A       				135.125.101.218
-mail 					IN		A						135.125.101.218
-voip					IN		A						135.125.101.218
+ns                      IN      A       				135.125.101.226
+@                       IN      A       				135.125.101.226
+www                     IN      A       				135.125.101.226
+b2b                     IN      A       				135.125.101.226
+mail 					IN		A						135.125.101.226
+voip					IN		A						135.125.101.226
