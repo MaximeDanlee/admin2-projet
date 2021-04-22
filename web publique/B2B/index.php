@@ -1,5 +1,5 @@
 <?php
-$hostname='172.16.128.10';
+$hostname='172.16.129.10';
 $user = "b2b";
 $password = "P@sswordMysql123";
 $database = "example_database";
