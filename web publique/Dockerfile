@@ -12,4 +12,3 @@ COPY ./www/index.html /etc/nginx/html/www/index.html
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-CMD service nginx restart
