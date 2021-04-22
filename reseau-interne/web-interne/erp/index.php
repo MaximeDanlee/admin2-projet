@@ -1,6 +1,6 @@
 <?php
 $hostname='172.16.128.10';
-$user = "test";
+$user = "erp";
 $password = "P@sswordMysql123";
 $database = "example_database";
 $table = "todo_list";

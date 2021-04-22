@@ -1,7 +1,7 @@
 <?php
 $hostname='172.16.128.10';
-$user = "test";
-$password = "password";
+$user = "b2b";
+$password = "P@sswordMysql123";
 $database = "example_database";
 $table = "todo_list";
 
