@@ -1,14 +1,7 @@
 FROM ubuntu:latest
 RUN apt update 
 RUN apt upgrade -y 
-RUN apt install snapd nginx php-fpm php-mysql -y
-
-RUN service snapd start
-RUN snap install core
-RUN snap refresh core
-RUN apt-get remove certbot
-RUN snap install --classic certbot
-RUN ln -s /snap/bin/certbot /usr/bin/certbot
+RUN apt install nginx php-fpm php-mysql -y
 
 RUN mkdir /etc/nginx/html
 RUN mkdir /etc/nginx/html/b2b
@@ -19,4 +12,4 @@ COPY ./www/index.html /etc/nginx/html/www/index.html
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-RUN sudo certbot --nginx
+CMD service nginx restart
