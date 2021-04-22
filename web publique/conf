@@ -13,3 +13,5 @@ docker exec -it web-intern service php7.4-fpm restart
 
 <-- configuration de mysql -->
 docker exec -it web-intern service mysql restart
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' bdd
