@@ -4,14 +4,39 @@ $user = "b2b";
 $password = "P@sswordMysql123";
 $database = "example_database";
 $table = "todo_list";
+?>
+
+<html>
+<head>
+<title>Test PHP</title>
+</head>
+<body>
+<p>Bonjour, bienvue dans B2B</p>
+
+<form method="" action="">
+  Name: <input type="text" name="name" required>
+  <input type="submit" name="submit">
+</form>
+
+<?php
+  if(isset($_POST['submit'])){
+    if(!empty($_POST['name'])){
+      $name = $_POST['name'];
+      
+      try {
+        $db = new PDO("mysql:host=$hostname;dbname=$database", $user, $password);
+        $db-> query("INSERT INTO example_database.todo_list (content) VALUES ('$name')");
+        echo "Ajout réussi !";
+
+      } catch (PDOException $e) {
+          print "Error!: " . $e->getMessage() . "<br/>";
+          die();
+      }
+    }
+  }
 
 
-echo '<html>';
-echo '<head>';
-echo '<title>Test PHP</title>';
-echo '</head>';
-echo '<body>';
-echo '<p>Bonjour, bienvue dans B2B</p>';
+  
 
  try {
     $db = new PDO("mysql:host=$hostname;dbname=$database", $user, $password);
