@@ -13,7 +13,7 @@ $table = "todo_list";
 <body>
 <p>Bonjour, bienvue dans B2B</p>
 
-<form method="" action="">
+<form method="post" action="process.php">
   Name: <input type="text" name="name" required>
   <input type="submit" name="submit">
 </form>
