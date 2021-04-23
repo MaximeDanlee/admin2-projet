@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	
 	$statement = $mysqli->prepare("INSERT INTO todo_list (name) VALUES(content)"); //prepare sql insert query
 	//bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
-	$statement->bind_param('sss', $name); //bind values and execute insert query
+	$statement->bind_param('s', $name); //bind values and execute insert query
 	
 	if($statement->execute()){
 		print "success";
