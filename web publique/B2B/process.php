@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}	
 	
-	$statement = $mysqli->prepare("INSERT INTO todo_list (name) VALUES(content)"); //prepare sql insert query
+	$statement = $mysqli->prepare("INSERT INTO todo_list (content) VALUES(?)"); //prepare sql insert query
 	//bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
 	$statement->bind_param('s', $name); //bind values and execute insert query
 	
