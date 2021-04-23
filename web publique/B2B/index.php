@@ -13,37 +13,10 @@ $table = "todo_list";
 <body>
 <p>Bonjour, bienvue dans B2B</p>
 
-<<<<<<< HEAD
 <form method="post" action="process.php">
   Name: <input type="text" name="name" required>
   <input type="submit" name="submit">
 </form>
-=======
-<form method="" action="">
-  Name: <input type="text" name="name" required>
-  <input type="submit" name="submit">
-</form>
-
-<?php
-  if(isset($_POST['submit'])){
-    if(!empty($_POST['name'])){
-      $name = $_POST['name'];
-      
-      try {
-        $db = new PDO("mysql:host=$hostname;dbname=$database", $user, $password);
-        $db-> query("INSERT INTO example_database.todo_list (content) VALUES ('$name')");
-        echo "Ajout réussi !";
-
-      } catch (PDOException $e) {
-          print "Error!: " . $e->getMessage() . "<br/>";
-          die();
-      }
-    }
-  }
-
-
-  
->>>>>>> f1a2fe85ec751cfb7bc6a51ed6a631d5c0d544b9
 
 
 <?php
