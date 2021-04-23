@@ -4,15 +4,22 @@ $user = "b2b";
 $password = "P@sswordMysql123";
 $database = "example_database";
 $table = "todo_list";
+?>
+
+<html>
+<head>
+<title>Test PHP</title>
+</head>
+<body>
+<p>Bonjour, bienvue dans B2B</p>
+
+<form method="post" action="process.php">
+  Name: <input type="text" name="name" required>
+  <input type="submit" name="submit">
+</form>
 
 
-echo '<html>';
-echo '<head>';
-echo '<title>Test PHP</title>';
-echo '</head>';
-echo '<body>';
-echo '<p>Bonjour, bienvue dans B2B</p>';
-
+<?php
  try {
     $db = new PDO("mysql:host=$hostname;dbname=$database", $user, $password);
     echo "<h2>TODO</h2><ol>";

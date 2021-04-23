@@ -6,3 +6,4 @@ RUN apt install -y php-mysql
 
 
 COPY ./index.php /etc/nginx/html/b2b/index.php
+COPY ./process.php /etc/nginx/html/b2b/process.php
