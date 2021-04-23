@@ -12,6 +12,7 @@ services:
         networks:
             default:
                 ipv4_address: 172.16.129.4
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
     php:
         image: adminprojet123/php_service:latest
@@ -21,7 +22,7 @@ services:
 
     certbot:
         image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/certbot --email he201801@students.ephec.be --agree-tos --no-eff-email -d l2-2.ephec-ti.be www.l2-2.ephec-ti.be b2b.l2-2.ephec-ti.be
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
