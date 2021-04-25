@@ -2,7 +2,7 @@ $ORIGIN l2-2.ephec-ti.be.
 $TTL	3600
 @	    IN	    SOA	    ns.l2-2.ephec-ti.be.   he201801.students.ephec.be. (
 
-		    2	        ; Serial
+		    3	        ; Serial
 			3600		; Refresh
 			600		    ; Retry
 			86400		; Expire
