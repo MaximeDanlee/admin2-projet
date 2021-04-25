@@ -15,6 +15,6 @@ ns              IN      A       172.16.128.2
 ; Resolver
 resolv          IN      A       172.16.128.3  
 
-; A record for www
-www             IN      A       172.16.128.4 
+; A record for erp
+erp             IN      A       172.16.128.4 
  
