@@ -9,12 +9,14 @@ $TTL	3600
 			600 )	    ; Negative Cache TTL
 
 
+; indique les différents fonctions da	ns le réseau et quel serveur s'en occupe
 l2-2.ephec-ti.be.       IN      NS      				ns.l2-2.ephec-ti.be.
 @						IN 		MX 		10				mail.l2-2.ephec-ti.be.
 _sip._tcp		86400			IN		SRV		10		60	5060	voip.l2-2.ephec-ti.be.
 _sip._udp		86400			IN		SRV		10		60	5060	voip.l2-2.ephec-ti.be.
 
 
+; liaison des noms de serveurs à leurs adresses ip
 ns                      IN      A       				135.125.101.226
 @                       IN      A       				135.125.101.226
 www                     IN      A       				135.125.101.226
