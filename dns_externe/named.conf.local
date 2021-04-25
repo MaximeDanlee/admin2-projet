@@ -1,4 +1,6 @@
-zone "tl2-2.ephec-ti.be" {
+zone "l2-2.ephec-ti.be" {
     type master;
-    file "/etc/bind/zones/db.tl2-2.ephec-ti.be";
+    file "/etc/bind/zones/db.l2-2.ephec-ti.be.signed";
+    allow-transfer { none; };
+    allow-update { none; };
 };

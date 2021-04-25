@@ -1,6 +1,8 @@
 options {
 	directory "/var/cache/bind";
 
+	listen-on port 53 { any; };
+
 	// If there is a firewall between you and nameservers you want
 	// to talk to, you may need to fix the firewall to allow multiple
 	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
@@ -14,26 +16,24 @@ options {
 	// 	0.0.0.0;
 	//};
 
+	// empêche la recursion pour éviter les attaques DDoS
     recursion no;
+
+	// empêche le transfert de zone vu qu'il n'y a qu'un serveur pour cette zone
     allow-transfer { none; };
+
+	// empêche que d'éventuels données supplémentaires soient envoyés pour éviter le cache-poisoning entre autres
+	additional-from-cache no;
+	additional-from-auth no;
+
+	// activation du DNSSEC
+	dnssec-enable yes;
+	dnssec-validation yes;
+	dnssec-lookaside auto;
 
 	//========================================================================
 	// If BIND logs error messages about the root key being expired,
 	// you will need to update your keys.  See https://www.isc.org/bind-keys
 	//========================================================================
-
-    logging {
-        channel bind.log {
-            file "/var/lib/bind/bind.log" versions 10 size 20m;
-            severity notice;
-            print-category yes;
-            print-severity yes;
-            print-time yes;
-        };
-    
-            category queries { bind.log; };
-            category default { bind.log; };
-            category config { bind.log; };
-    };
         
 };

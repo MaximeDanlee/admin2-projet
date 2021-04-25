@@ -1,0 +1,17 @@
+<-- Créer et lancer iamge docker -->
+docker build -t webserver-extern .
+docker run -it --rm -d -p 80:80 --network test-reseau --ip 172.16.128.4 --name web-extern webserver-extern
+
+<--- Tester serveur nginx --> 
+docker exec -it web-intern nginx -t
+docker exec -it web-intern service nginx restart
+
+
+<-- tester php -->
+docker exec -it web-intern php-fpm7.4 -t 
+docker exec -it web-intern service php7.4-fpm restart
+
+<-- configuration de mysql -->
+docker exec -it web-intern service mysql restart
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' bdd
