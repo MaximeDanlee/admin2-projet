@@ -2,10 +2,10 @@ $ORIGIN l2-2.ephec-ti.be.
 $TTL	3600
 @	    IN	    SOA	    ns.l2-2.ephec-ti.be.   he201801.students.ephec.be. (
 
-		    3	        ; Serial
+		    2021042801	; Serial
 			3600		; Refresh
 			600		    ; Retry
-			86400		; Expire
+			1209700		; Expire
 			600 )	    ; Negative Cache TTL
 
 
