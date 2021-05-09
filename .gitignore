@@ -1,2 +1,4 @@
 .default.conf.swp
-
+.vscode
+mysql.ini
+./web\ publique/B2B/mysql.ini
