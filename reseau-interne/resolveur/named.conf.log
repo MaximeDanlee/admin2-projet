@@ -1,0 +1,6 @@
+logging {
+        channel querylog {
+                file "/var/log/querylog";
+                severity debug 3;
+        };
+};

@@ -5,4 +5,6 @@ RUN apt update && apt upgrade -y && apt install bind9 bind9utils -y && apt-get u
 COPY ./named.conf.local /etc/bind/named.conf.local
 COPY ./named.conf.options /etc/bind/named.conf.options
 
+RUN touch /var/log/querylog
+
 CMD named -c /etc/bind/named.conf -g 
