@@ -1,11 +1,12 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
+	$mysql_config = parse_ini_file('mysql.ini');
 
 	//mysql credentials
-	$mysql_host = "172.16.129.10";
-	$mysql_username = "b2b";
-	$mysql_password = "P@sswordMysql123";
-	$mysql_database = "example_database";
+	$mysql_host = $mysql_config['host'];
+	$mysql_username = $mysql_config['username'];
+	$mysql_password = $mysql_config['password'];
+	$mysql_database = $mysql_config['database'];
 	
 	$name = filter_var($_POST["name"], FILTER_SANITIZE_STRING); //set PHP variables like this so we can use them anywhere in code below
 

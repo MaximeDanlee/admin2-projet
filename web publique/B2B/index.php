@@ -1,8 +1,10 @@
 <?php
-$hostname='172.16.129.10';
-$user = "b2b";
-$password = "P@sswordMysql123";
-$database = "example_database";
+$mysql_config = parse_ini_file('mysql.ini');
+
+$hostname=$mysql_config['host'];;
+$user = $mysql_config['username'];;
+$password = $mysql_config['password'];;
+$database = $mysql_config['database'];;
 $table = "todo_list";
 ?>
 
