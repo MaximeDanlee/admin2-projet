@@ -1,9 +1,10 @@
 FROM ubuntu:latest
 RUN apt update && apt upgrade -y && apt install bind9 bind9utils -y && apt-get update && apt-get install iputils-ping && apt install dnsutils -y
 
-
+COPY ./named.conf /etc/bind/named.conf
 COPY ./named.conf.local /etc/bind/named.conf.local
 COPY ./named.conf.options /etc/bind/named.conf.options
+COPY ./named.conf.log /etc/bind/named.conf.log
 
 RUN touch /var/log/querylog
 
