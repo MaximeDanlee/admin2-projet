@@ -9,6 +9,8 @@ COPY ./erp/index.php /etc/nginx/html/erp/index.php
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
+COPY ./erp/process.php /etc/nginx/html/erp/process.php
+
 RUN rm /var/www/html/index.nginx-debian.html
 
 
