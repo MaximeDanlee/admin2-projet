@@ -7,7 +7,6 @@ options {
         // you will need to update your keys.  See https://www.isc.org/bind-keys
         //========================================================================
         dnssec-validation no;
-        dnssec-enable no;
 
         listen-on-v6 { any; };
         listen-on port 53 {any;};
