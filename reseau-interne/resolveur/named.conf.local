@@ -2,8 +2,14 @@ zone "woodytoys.intern" {
             type forward;                                                                                                                                                           
             forwarders { 172.16.128.2; };                                                                                                                                            
             forward only;                                                                                                                                                           
-        };                                                                                                                                                                          
-                                                                                                                                                                                    
+        };   
+
+zone "l2-2.ephec-ti.be" {                                                                                                                                                              
+            type forward;                                                                                                                                                           
+            forwarders { 172.16.128.2; };                                                                                                                                            
+            forward only;                                                                                                                                                           
+        };   
+                                                                                                                                                                                                                                                                                                                                                          
 zone "128.16.172.in-addr.arpa" {                                                                                                                                                     
             type forward;                                                                                                                                                           
             forwarders { 172.16.128.2; };                                                                                                                                            
