@@ -15,9 +15,3 @@ zone "l2-2.ephec-ti.be" {
             forwarders { 172.16.129.1; };                                                                                                                                            
             forward only;                                                                                                                                                           
         };   
-
-zone "129.16.172.in-addr.arpa" {                                                                                                                                                     
-            type forward;                                                                                                                                                           
-            forwarders { 172.16.129.1; };                                                                                                                                            
-            forward only;                                                                                                                                                           
-        };  
