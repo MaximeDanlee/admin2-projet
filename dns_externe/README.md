@@ -6,7 +6,7 @@
 docker build -t adminprojet123/dns_public:latest .
 ```
 
-## Push l'image sur GitHub
+## Push l'image sur DockerHub
 
 ### avec les builds automatisés
 
