@@ -24,3 +24,10 @@ b2b                     IN      A       				135.125.101.226
 mail 					IN		A						135.125.101.226
 voip					IN		A						135.125.101.226
 factevis				IN		A						135.125.101.218
+
+;SPF :  Ceci indique que seul le serveur 135.125.101.226 peut envoyer des emails pour ce domaine 
+@ IN TXT "v=spf1 ip4:135.125.101.226 ~all"
+
+;DMARC 
+_dmarc TXT ( "v=DMARC1;p=quarantine;sp=quarantine;pct=100;adkim=r;aspf=r;fo=1;ri=86400;rua=mailto:dmarc@l2-2.ephec-ti.be;ruf=mailto:dmarc@l2-2.ephec-ti.be;rf=afrf" )
+_dmarc.skyminds.net TXT ( "v=DMARC1;p=quarantine;sp=quarantine;pct=100;adkim=r;aspf=r;fo=1;ri=86400;rua=mailto:dmarc@l2-2.ephec-ti.be;ruf=mailto:dmarc@l2-2.ephec-ti.be;rf=afrf" )
